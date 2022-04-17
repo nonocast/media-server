@@ -10,10 +10,10 @@ SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # CCFLAG := -std=c++11 -arch x86_64
-CCFLAG := -std=c++11 -arch arm64
-CPPFLAGS := -Iinclude 
+CCFLAG := -std=c++11 -arch arm64 -g
+CPPFLAGS := -Iinclude `pkg-config --cflags opencv4`
 CFLAGS   := -Wall
-LDFLAGS  := -Llib 
+LDFLAGS  := -Llib `pkg-config --libs opencv4`
 LDLIBS   := -lm
 
 .PHONY: all clean

@@ -5,17 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "clang - Build and debug active file",
-      "type": "cppdbg",
+      "name": "(lldb) Launch",
+      "type": "lldb",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "./build/app",
       "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
+      "stopAtEntry": true,
+      "cwd": "./build",
       "environment": [],
       "externalConsole": false,
       "MIMode": "lldb",
-      "preLaunchTask": "C/C++: clang build active file"
+      "targetArchitecture": "arm64"
     }
   ]
 }
