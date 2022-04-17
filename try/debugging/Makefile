@@ -11,9 +11,9 @@ OBJ := $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # CCFLAG := -std=c++11 -arch x86_64
 CCFLAG := -std=c++11 -arch arm64
-CPPFLAGS := -Iinclude `pkg-config --cflags opencv4`
+CPPFLAGS := -Iinclude 
 CFLAGS   := -Wall
-LDFLAGS  := -Llib `pkg-config --libs opencv4`
+LDFLAGS  := -Llib 
 LDLIBS   := -lm
 
 .PHONY: all clean
